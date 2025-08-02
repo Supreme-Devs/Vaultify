@@ -9,11 +9,10 @@ const Hero = () => {
         </p>
         <div className='mt-8 w-full flex justify-center max-w-2xl'>
             <input type="text" placeholder='Email' className='border border-neutral-600 rounded-xl mr-4 bg-transparent placeholder:text-neutral-500 text-white px-4 flex-1 focus:outline-none' />
-            <button className='relative py-2 px-4 border border-neutral-700 rounded-xl cursor-pointer text-white'>
-                <div className='absolute w-full h-px bg-gradient-to-r from-transparent via-primary to-transparent inset-x-0 overflow-hidden -bottom-px '>
-
-                </div>
-                Sign Up</button>
+            <button className="relative py-2 px-4 border border-neutral-700 rounded-xl cursor-pointer text-white overflow-hidden">
+  <span className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-transparent via-primary to-transparent blur-md opacity-100" />
+  Sign Up
+</button>
         </div>
     </div>
   )
