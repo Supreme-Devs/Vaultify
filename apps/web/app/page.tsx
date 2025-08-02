@@ -8,7 +8,6 @@ import FeaturesSection from "./components/feature-section";
 import CTASection from "./components/cta-section";
 import Footer from "./components/footer";
 
-
 export default function VaultifyLanding() {
   const [isDark, setIsDark] = useState(false);
 
@@ -21,7 +20,7 @@ export default function VaultifyLanding() {
   }, [isDark]);
 
   return (
-    <div className="min-h-screen bg-[#C4FF00] dark:bg-slate-900 transition-all duration-500">
+    <div className="min-h-screen w-full bg-[#C4FF00] dark:bg-slate-900 transition-all duration-500">
       <Header isDark={isDark} setIsDark={setIsDark} />
       <HeroSection />
       <GradientTransition from="lime" to="white" />
