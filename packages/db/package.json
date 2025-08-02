@@ -1,0 +1,25 @@
+{
+  "name": "@repo/db",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest",
+    "prisma": "^6.13.0"
+  },
+  "exports":{
+    "./client": "./index.ts"
+  },
+  "scripts": {
+    "generate": "bunx prisma generate",
+		"migrate": "bunx prisma migrate deploy",
+		"db:push": "bunx prisma db push",
+		"studio": "bunx prisma studio"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.13.0"
+  }
+}
