@@ -1,12 +1,13 @@
 "use client";
 
+import CTASection from "@/components/cta-section";
+import FeaturesSection from "@/components/feature-section";
+import Footer from "@/components/footer";
+import GradientTransition from "@/components/gradient-transition";
+import Header from "@/components/header";
+import HeroSection from "@/components/hero-section";
 import { useState, useEffect } from "react";
-import Header from "./components/header";
-import HeroSection from "./components/hero-section";
-import GradientTransition from "./components/gradient-transition";
-import FeaturesSection from "./components/feature-section";
-import CTASection from "./components/cta-section";
-import Footer from "./components/footer";
+
 
 export default function VaultifyLanding() {
   const [isDark, setIsDark] = useState(false);

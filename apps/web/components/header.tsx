@@ -81,9 +81,9 @@ export default function Header({ isDark, setIsDark }: HeaderProps) {
             Login
           </Button>
 
-          <Button className="hidden md:inline-flex bg-green-600 text-white hover:bg-green-700 rounded-full px-6 py-2 font-medium">
+          {/* <Button className="hidden md:inline-flex bg-green-600 text-white hover:bg-green-700 rounded-full px-6 py-2 font-medium">
             Get Started
-          </Button>
+          </Button> */}
 
           {/* Mobile Menu Button */}
           <button
