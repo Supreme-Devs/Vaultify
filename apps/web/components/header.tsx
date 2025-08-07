@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Moon, Sun, Shield, Lock, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { signIn } from "next-auth/react";
 
 interface HeaderProps {
   isDark: boolean;
@@ -59,12 +60,12 @@ export default function Header({ isDark, setIsDark }: HeaderProps) {
           </a>
         </div>
 
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-4 ">
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             onClick={() => setIsDark(!isDark)}
-            className="p-2 rounded-lg bg-black/10 backdrop-blur-sm text-black hover:bg-black/20 transition-colors md:hidden"
+            className="p-2 rounded-lg bg-black/10 backdrop-blur-sm text-black hover:bg-black/20 transition-colors md:hidden "
           >
             {isDark ? (
               <Sun className="w-5 h-5" />
@@ -76,6 +77,9 @@ export default function Header({ isDark, setIsDark }: HeaderProps) {
           <Button
             variant="outline"
             className="hidden md:inline-flex bg-white border-white text-black hover:bg-gray-100 rounded-full px-6 py-2 font-medium"
+            onClick={() => {
+              signIn("githubb", {callbackUrl: "/", redirect: true});
+            }}
           >
             <Lock className="w-4 h-4 mr-2" />
             Login
